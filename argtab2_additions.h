@@ -12,18 +12,18 @@
 
 /** Argument type identifiers. */
 enum argtype {
-    ARGAD_REM=1,
-    ARGAD_LIT=2,
-    ARGAD_INT=3,
-    ARGAD_DBL=4,
-    ARGAD_STR=5,
-    ARGAD_REX=6,
-    ARGAD_FILE=7,
-    ARGAD_DATE=8,
-    ARGAD_END=9
+    ARGAD_REM  = 1,
+    ARGAD_LIT  = 2,
+    ARGAD_INT  = 3,
+    ARGAD_DBL  = 4,
+    ARGAD_STR  = 5,
+    ARGAD_REX  = 6,
+    ARGAD_FILE = 7,
+    ARGAD_DATE = 8,
+    ARGAD_END  = 9
 };
 
-/** Returns an integer corresponding to the king of argument (double, string, filename etc.) that was passed. @see enum argtype  */
+/** Returns an integer corresponding to the type of argument (double, string, filename etc.) that was passed. @see enum argtype  */
 int argad_get_argument_type(
     void * arg
 );
@@ -44,13 +44,13 @@ void argad_fprint_shell_call(
     int argc,
     char **argv
 );
-/** Prints all a timestamp as well as all parameters passed in argv to stdout. Convenience */
+/** Prints a timestamp as well as all parameters passed in argv to stdout. Convenience */
 void argad_print_shell_call(
     int argc,
     char **argv
 );
 
-/** Concenience function to get the maximal number of file arguments **/
+/** Convenience function to get the maximal number of file arguments **/
 int argad_get_file_args(
     const int argc,
     char** argv
@@ -73,7 +73,7 @@ void argad_handle_errors(
     void **argtable
 );
 
-// DEFINE NEW ARGUMENT CONSTRUCTORS
+// DEFINE NEW ARGUMENT CONSTRUCTORS (to hack argument types into the flag property)
 struct arg_rem* argad_rem(const char* datatype, const char* glossary);
 
 struct arg_lit* argad_lit0(const char* shortopts,
