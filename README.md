@@ -1,2 +1,3 @@
-# argtable_additions
-Poorly written wrapper around argtable2 to add additional functionality
+# Argtable Additions
+
+Poorly written wrapper around argtable2 to add additional functionality.
