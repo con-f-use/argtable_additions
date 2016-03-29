@@ -307,7 +307,7 @@ struct arg_rex* argad_rexn(const char* shortopts, const char* longopts,
 const char* pattern, const char* datatype, int mincount, int maxcount,
 int flags, const char *glossary) {
     struct arg_rex* ret;
-    ret = arg_rexn(shortopts, longopts, datatype, pattern, mincount, maxcount,
+    ret = arg_rexn(shortopts, longopts, pattern, datatype, mincount, maxcount,
         flags, glossary);
     ret->hdr.flag = ret->hdr.flag | (ARGAD_REX<<ARGAD_FLAG_LENGTH);
     return ret;
