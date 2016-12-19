@@ -162,7 +162,7 @@ void argad_fprint_shell_call(FILE* fd, int argc, char **argv) {
 #ifndef SC_NOUSER
     char *username = getenv("USER");
     if ( username != NULL ) {
-        fprintf(fd, "%s", username);
+        fprintf(fd, "Running as %s", username);
     }
 #endif
 #if !defined(SC_NOHOST) && defined(HAVE_UNISTD_H)
